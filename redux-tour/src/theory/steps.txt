@@ -1,0 +1,13 @@
+* first we create a store
+* for creating a store we need two things, state and reducer
+* after creating a reducer, with initialState
+* we have to plugin  a store, and it has to be done in the hightest level (root level) ex:index.js
+* and we have to import certain modules
+
+* Provider from react-redux
+* Provider will allow us to inject the global storage
+* so we are going to wrap the entire app with the Provider
+* and we need to create a store now,
+* and we also need to import the reducer, and now we create the store and pass the reducer
+* now we need to pass the store as the property
+* now go the app, and comment the localState, because now we are going to use global state
