@@ -1,0 +1,4 @@
+1. if you are creating a  custom hook , start the naming with "use"
+2. as we are replacing useState, so we are expecting to return the same [name,setName]
+3. and we are going to use react hooks in this custom hook, and we are going to return the exact same
+   values that the App.js is expecting
