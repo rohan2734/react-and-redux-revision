@@ -1,0 +1,4 @@
+* a custom component, which is a button
+* inside a button, we will have a default style, 
+* and we will have  a prop called disable, and we will have the logic inside the button
+* and 

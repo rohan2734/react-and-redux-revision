@@ -1,0 +1,17 @@
+/**
+   * now we need to subscribe to the store,so any changes happened to the store will automatically update the pages,
+   * and we should also be able to dispatch the action
+   * inside the component, we can use state, or props, but we cannot use our local state, so we will use props
+   * so we use dispatch to props , and it takes dispatch as an argument, and it returns event 
+   * so now we return the map object, we will have event hanlders , and we set as property , 
+   * and we write anonymous funcitons and it dispatch acitons
+   * onAgeUp and onAgeDown are properties 
+   *
+   * now these types should also need to be defined in the reducer
+   * now the second thing here is , whenver the state is changed, we need to be able to subscribe, so instead of scubscribe
+   * we map with props, so that it is automatically available,
+   * so instead of dispatch , we have state, and it returns age 
+   * so to connect the mapStateToProps and mapDispatchToProps to store, we import connect from react redux
+   * so when we use this connect, it is  a higher order component, it takes the component and returns another component,
+   * so we pass the App component 
+   */

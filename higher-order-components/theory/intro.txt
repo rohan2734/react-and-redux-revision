@@ -1,0 +1,3 @@
+* we can abstract out the common funcitionalities in the components
+* and we can build a funciton, and we can pass a component, and do something in it, and we can return a  component
+* inside this funciton, we dont change the funcitionality, but we can inject new props, or we can build custom errors
