@@ -1,0 +1,5 @@
+* for adding elements into array, we cannot use push method
+* since it mutates the state
+* we need to create a copy of the array, and then add it 
+
+* so we need to use concat, concat, instead of mutating the array, it returns a new array
