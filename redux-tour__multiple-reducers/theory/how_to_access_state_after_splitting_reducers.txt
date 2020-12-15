@@ -1,0 +1,3 @@
+* now we dont have state b, in reducerA,
+* so how do we get access to it
+* for that ,we need to pass it as a payload

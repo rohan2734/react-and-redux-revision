@@ -1,0 +1,5 @@
+* to combine the reducers , we should have a speical funcitonality fo=rom redux 
+* that is combineReducers
+* and before passing it to root
+* we need ot creat a root reducers
+* now instead of passing it as a argument, we can rename it

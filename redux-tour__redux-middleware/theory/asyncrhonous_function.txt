@@ -1,0 +1,6 @@
+* let us say, when we click the agE_up button, we need to save it on the server
+* and then when it saves on the server we update it* and when there is error, we exit out and show error
+
+* when we try to run anything asynchronous in reducer , it will work
+* because reducers are syncrhonous
+* we want to catch a action in the middle, do our operation of saving, and then once it is done, we want to contiue our action to reducers state
