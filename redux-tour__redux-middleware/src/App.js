@@ -1,40 +1,70 @@
+import React,{Component} from "react";
 import './App.css';
-import React, {Component} from "react";
-import {connect} from "react-redux";
+import { connect} from "react-redux";
 
-
-class App extends Component{
+class App extends Component{  
+  // state = {
+  //   age: 21
+  // }
+  // onAgeUp = () => {
+  //   this.setState({
+  //     ...this.state,
+  //     age: ++this.state.age
+  //   })
+  // }
+  // onAgeDown = () => {
+  //   this.setState({
+  //     ...this.state,
+  //     age: --this.state.age
+  //   })
+  // }
+  
+  
   render(){
     return(
       <div className="App">
-        <div className="col">
-          <div><span>A:</span><span>{this.props.a}</span></div>
-          <button onClick={() => this.props.updateA(this.props.b)}>Update A</button>
-        </div>
-        <div className="col">
-          <div><span>B:</span><span>{this.props.b}</span></div>
-          <button onClick={() => this.props.updateB(this.props.a)}>Update B</button>
-        </div>
+        {/* <div>Age: <span>{this.state.age}</span></div>
+        <button onClick={this.onAgeUp}>Age UP</button>
+        <button onClick={this.onAgeDown}>Age Down</button> */}
+        <div>Age: <span>{this.props.age}</span></div>
+        <button onClick={this.props.onAgeUp}>Age UP</button>
+        <button onClick={this.props.onAgeDown}>Age Down</button>
+        {/* <hr/>
+
+        <div>History</div>
+        <div>
+          <ul>
+            {
+              this.props.history.map((el) => (
+                <li key={el.id} onClick={() => this.props.onDelItem(el.id)}>
+                  {el.age}
+                </li>
+              ))
+            }
+          </ul>
+        </div> */}
+      
       </div>
     )
   }
+
 }
 
-const mapStoreToProps = (store) => {
+const mapStateToProps = (state) => {
   return {
-    // a:store.a,
-    // b:store.b
-    a:store.rA.a,
-    b:store.rB.b
+    age: state.age,
+    // history : state.history
   }
 }
 
+
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateA : (b) => dispatch({type:"UPDATE_A",b:b}),
-    updateB: (a) => dispatch({type:"UPDATE_B",a:a})
+    onAgeUp : () => dispatch({type:"AGE_UP",value: 1}),
+    onAgeDown: () => dispatch({type:"AGE_DOWN",value: 1})
+    // onDelItem: (id) => dispatch({type:"DEL_ITEM",key: id})
   }
 }
 
 // export default App;
-export default connect(mapStoreToProps,mapDispatchToProps)(App);
+export default  connect(mapStateToProps,mapDispatchToProps)(App);

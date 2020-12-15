@@ -1,6 +1,6 @@
 const initialState = {
-    age : 20,
-    history: []
+    age : 20
+    // history: []
 }
 
 //setting the state as default by initialState
@@ -18,11 +18,11 @@ const reducer = (state = initialState,action) => {
             // newState.age++;
             return{
                 ...state,
-                age: state.age + action.value,
-                history: state.history.concat({
-                    id:Math.random(),
-                    age : state.age + action.value
-                })
+                age: state.age + action.value
+                // history: state.history.concat({
+                //     id:Math.random(),
+                //     age : state.age + action.value
+                // })
             }
             // newState.age = state.age + action.value;
             // newState.history = state.history.concat({age:state.age + action.value})
@@ -31,21 +31,21 @@ const reducer = (state = initialState,action) => {
             // newState.age--;
             return{
                 ...state,
-                age:state.age -action.value,
-                history: state.history.concat({
-                    id:Math.random(),
-                    age:state.age - action.value
-                })
+                age:state.age -action.value
+                // history: state.history.concat({
+                //     id:Math.random(),
+                //     age:state.age - action.value
+                // })
             }
             // newState.age = state.age - action.value;
             // newState.history = state.history.concat({age:state.age - action.value})
             // break;
 
-        case "DEL_ITEM":
-            return {
-                ...state,
-                history: state.history.filter((el) => el.id !== action.key )
-            }
+        // case "DEL_ITEM":
+        //     return {
+        //         ...state,
+        //         history: state.history.filter((el) => el.id !== action.key )
+        //     }
         default:
             return state;
     }
