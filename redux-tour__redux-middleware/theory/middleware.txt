@@ -1,0 +1,15 @@
+* to add the middleware, we need to import applyMiddleware from "redux"
+* we need to pass it to the store, and execute it , as it is a function
+
+* when we click on age up and age down, we want to capture the action and console log the action
+* so we create a function, which accepts store as argument , and we pass this function as a argument inside the
+  applyMiddleware function.
+
+* now when the action dispathces, it will first catch the action, now when we catch the action, we can take it and do something else
+* now we return a function which has argument called next
+* now that we capture it, we need to return it , after doing an aciton
+
+* now we just look at the action, and to get the content of the action, we pass the action to the next function
+* and we store it in the result, and now we have the action
+* we console.log the action, and we let the action continue
+* so we return the result
