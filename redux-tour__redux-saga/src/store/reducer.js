@@ -14,19 +14,32 @@ const reducer = (state = initialState,action) => {
     //     newState.age--;
     // }
     switch(action.type){
-        case "AGE_UP":
-            // newState.age++;
-            return{
-                ...state,
-                age: state.age + action.value
-                // history: state.history.concat({
-                //     id:Math.random(),
-                //     age : state.age + action.value
-                // })
-            }
-            // newState.age = state.age + action.value;
-            // newState.history = state.history.concat({age:state.age + action.value})
-            // break;
+        // case "AGE_UP":
+        //     // newState.age++;
+        //     return{
+        //         ...state,
+        //         age: state.age + action.value
+        //         // history: state.history.concat({
+        //         //     id:Math.random(),
+        //         //     age : state.age + action.value
+        //         // })
+        //     }
+        //     // newState.age = state.age + action.value;
+        //     // newState.history = state.history.concat({age:state.age + action.value})
+        //     // break;
+        case "AGE_UP_ASYNC":
+        // newState.age++;
+        return{
+            ...state,
+            age: state.age + action.value
+            // history: state.history.concat({
+            //     id:Math.random(),
+            //     age : state.age + action.value
+            // })
+        }
+        // newState.age = state.age + action.value;
+        // newState.history = state.history.concat({age:state.age + action.value})
+        // break;
         case "AGE_DOWN":
             // newState.age--;
             return{

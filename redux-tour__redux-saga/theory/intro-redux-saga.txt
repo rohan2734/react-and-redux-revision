@@ -1,0 +1,9 @@
+* when we click on age up, the action gors from ui to reducer right away
+* now what if , i want to save that age onto the server, and thenonly should update that into the ui or reducer
+* so that is where the middleware, redux-saga comes update
+
+* so redux-saga allows you to dispatch the actions normally
+* unlike redux-thunk,
+* and then in redux-saga, we have a watcher, and whenever a particular aciton dispatches, it catches, and onece it catches
+* the job is to first execute the asynch task, and then perform the task of reaching the reducer
+
