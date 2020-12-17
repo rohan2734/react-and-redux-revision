@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.col{
+  display: inline-block;
+  margin: 40px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
