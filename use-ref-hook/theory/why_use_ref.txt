@@ -1,0 +1,21 @@
+* to show the number of times , a component is rendered
+
+* State is not the way to show , how many times a component is rendered, because it will take you to the inifinite loop
+* the solution is to use refs
+* A ref is very similar to state , and that persits, between renders of your component
+* but  the important thing, between ref and state, is ref doesnt cause you to rerender
+
+* so instead of useState, we use useRef, and it will return only one single value called renderCount
+* and it contains a object, and it is {current : 0}
+
+* so the important thing here is that, we can change this renderCount.current , as much as we want , and as many times as we want ,
+and will never cause our component to rerender, because it is completely different from our render cycle
+
+* so the similar thing about ref , is that it is very similar to state ,and that you can  store a previous value , 
+    and it persists between different renders, but it doesnt   cause you to rerender.
+
+* and the biggest useCase for ref is to reference elements inside of your HTML and this is so popular that, each document has a ref property
+* now we use ref on input and add it to the inputRef
+* and now  on button click, we want to update our inputRef, to focus input
+
+* another great use case is, to store the previous value of the state, 
